@@ -112,7 +112,8 @@ kirim.addEventListener('click',function(){
     if(koljawaban.value == pertanyaan[nomorPertanyaan].jawaban){
         koljawaban.classList.add('hidden')
         kirim.textContent = "Lanjut";
-        hasil.textContent = 'Benar'
+        hasil.textContent = 'Benar';
+        hasil.style.color = 'green';
         skor++
         skorUI.textContent = skor
         if(nomorPertanyaan+1 == pertanyaan.length){
@@ -131,7 +132,8 @@ kirim.addEventListener('click',function(){
         hasil.textContent = 'Isi kolom jawaban';
     }
     else{
-        hasil.textContent = 'Salah'
+        hasil.style.color = 'red';
+        hasil.textContent = 'Salah';
         skor--
         skorUI.textContent = skor
         if(skor < 0){
